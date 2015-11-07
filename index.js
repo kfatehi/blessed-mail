@@ -30,11 +30,9 @@ var status = blessed.box({
   width: 'shrink',
   style: {
     bg: 'blue'
-  },
-  content: 'Idle'
+  }
 });
 
-list.setItems(inbox.getSubjects());
 
 list.on('select', function(el, index) {
   var email = inbox.getEmailAt(index);
@@ -48,4 +46,14 @@ screen.key(['escape', 'q', 'C-c'], function(ch, key) {
   return process.exit(0);
 });
 
-screen.render();
+fetchMessages(screen, status, list, inbox);
+
+function fetchMessages(screen, status, list, inbox) {
+  status.setContent("Fetching messages...")
+  screen.render();
+  inbox.refresh(function() {
+    list.setItems(inbox.getSubjects());
+    status.setContent("Ready")
+    screen.render();
+  })
+}
