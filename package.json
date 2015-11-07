@@ -1,5 +1,5 @@
 {
-  "name": "gpgmail",
+  "name": "blessed-mail",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,5 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "blessed": "^0.1.81",
+    "lodash": "^3.10.1",
+    "minimist": "^1.2.0",
+    "shelljs": "^0.5.3"
+  }
 }
