@@ -14,3 +14,10 @@ You can decrypt those messages, compose a reply, encrypt, and send.
 
 [Gmail API Docs](https://developers.google.com/gmail/api/)
 
+## Shitty Google Caveat and TODO before we can really release
+
+Because gmail is retarded and forces centralized power in the form of a client token, I need to make a backend so that people dont need to go creating their own client tokens and shit.
+
+We can do this pretty easily and free using heroku. we just need to extract the relevant code from this project and put it behind a simple api and not leak the google secret.
+
+if we leak the google api secret, all the emails of that user are compromised. although it is not ideal, this is not too bad a trade-off considering that the emails sent and received with this program are encrypted with PGP and wouldn't be affected anyway.

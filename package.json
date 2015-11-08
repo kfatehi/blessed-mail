@@ -10,8 +10,12 @@
   "license": "ISC",
   "dependencies": {
     "blessed": "^0.1.81",
+    "bluebird": "^3.0.5",
+    "google-auth-library": "^0.9.7",
+    "googleapis": "^2.1.6",
     "lodash": "^3.10.1",
     "minimist": "^1.2.0",
+    "open": "0.0.5",
     "shelljs": "^0.5.3"
   }
 }
