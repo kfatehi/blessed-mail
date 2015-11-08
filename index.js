@@ -8,7 +8,8 @@ if (process.env.USE_CACHE) {
   ui.setStatus("Fetching PGP threads...")
   ui.setStatus("Loading metadata...")
   inbox.setThreads(threads);
-  ui.showInbox(inbox);
+  ui.setInbox(inbox);
+  ui.render();
 } else {
   var gmail = require('./lib/gmail');
   console.log('Talking to Google...');
@@ -20,7 +21,8 @@ if (process.env.USE_CACHE) {
     gmail.getThreads().then(function(threads) {
       ui.setStatus("Loading metadata...")
       inbox.setThreads(threads);
-      ui.showInbox(inbox);
+      ui.setInbox(inbox);
+      ui.render();
     })
   })
 }
