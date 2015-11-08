@@ -7,7 +7,7 @@ if (process.env.USE_CACHE) {
   var inbox = new Inbox();
   ui.setStatus("Fetching PGP threads...")
   ui.setStatus("Loading metadata...")
-  inbox.setThreads(threads);
+  inbox.down('threads', threads);
   ui.setInbox(inbox);
   ui.render();
 } else {
@@ -20,7 +20,7 @@ if (process.env.USE_CACHE) {
     ui.setStatus("Fetching PGP threads...")
     gmail.getThreads().then(function(threads) {
       ui.setStatus("Loading metadata...")
-      inbox.setThreads(threads);
+      inbox.down('threads', threads);
       ui.setInbox(inbox);
       ui.render();
     })
