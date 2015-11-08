@@ -16,6 +16,7 @@ The process must be started with passphrase and key from the environment. Key ma
 
 ## Resources
 
+[Blessed API](https://github.com/chjj/blessed)
 [Gmail API Docs](https://developers.google.com/gmail/api/)
 
 ## Shitty Google Caveat and TODO before we can really release
