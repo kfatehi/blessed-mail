@@ -10,6 +10,10 @@ The process is launched with your Gmail credentials.
 The ui allows you to browse your encrypted incoming mail.
 You can decrypt those messages, compose a reply, encrypt, and send.
 
+## Usage
+
+`PASSPHRASE="your passphrase goes here" KEY=$(gpg --export-secret-key -a "Your Name Here") node index.js`
+
 ## Resources
 
 [Gmail API Docs](https://developers.google.com/gmail/api/)

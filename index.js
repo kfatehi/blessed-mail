@@ -12,7 +12,6 @@ if (process.env.USE_CACHE) {
   ui.render();
 } else {
   var gmail = require('./lib/gmail');
-  console.log('Talking to Google...');
   gmail.authorize(function(err) {
     if (err) throw err;
     var ui = new UI();
